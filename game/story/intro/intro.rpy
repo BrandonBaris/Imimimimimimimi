@@ -59,5 +59,5 @@
     P0 "Alright... Looks like I need to beat this game then and that means defeating that dragon."
     H0 "That's the spirit."
 
-    jump act01_start
+    jump gauntlet_start
     return
