@@ -1,6 +1,8 @@
 label dragon_start:
   scene bg church with fade
-  
+  play music "assets/bgm/primal.mp3" fadeout 1.0 fadein 1.0
+  n0 "Finally you arrive at the lair of the dragon as the dragon rises up from its lethargy as it notices your presence."
+  p0 "Here goes nothing..."
   n0 "The dragon roars as it pulls back its head with flames bellowing as it prepares for a breath attack."
   with vpunch
   b0 "Watch out!"

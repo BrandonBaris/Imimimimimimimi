@@ -1,6 +1,6 @@
 ﻿label start:
     scene bg forest
-
+    play music "assets/bgm/newday.mp3" fadeout 1.0 fadein 1.0
     n0 "System initialized..."
     with fade
     n0 "5"
@@ -14,7 +14,7 @@
     n0 "1"
     with flash
     n0 "Complete"
-    with longflash
+    with longfade
 
     python:
         p0 = renpy.input("Enter your name.")
@@ -100,7 +100,7 @@
     n0 "1"
     with flash
     n0 "Complete"
-    with longflash
+    with longfade
 
     b0 "Welcome back [p0]"
     p0 "Huh."
