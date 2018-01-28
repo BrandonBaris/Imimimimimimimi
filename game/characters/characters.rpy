@@ -1,22 +1,25 @@
-define P0 = Character("[PLAYER_NAME]")
+define p0 = Character("[PLAYER_NAME]")
 
 # NARRATIVE
-define N0 = Character(
+define n0 = Character(
   None,
   window_background=None,
   what_size=30,
-  what_outlines=[( 1, "#000000", 0, 0 )],
+  what_outlines=[( 3, "#000000", 0, 0 )],
   color="#336699",
   what_xalign=0.5,
-  what_textalign=0.5,
+  what_textalign=0.2,
   what_layout="subtitle"
 )
 
-# BIRD
-define H0 = Character("Hana", color="#ee6600")
+# BLUE
+define b0 = Character("Blue", what_outlines=[( 1, "#000000", 0, 0 )], color="#ee6600")
+
+# DRAGON
+define d0 = Character("Dragon", color="#ee6600")
 
 # LILY
-define L0 = Character("Lily", color="#ee6600")
+define l0 = Character("Lily", color="#ee6600")
 
 # RYDER
-define R0 = Character("Ryder", color="#ee6600")
+define r0 = Character("Ryder", color="#ee6600")
