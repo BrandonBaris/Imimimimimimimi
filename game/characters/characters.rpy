@@ -12,6 +12,17 @@ define n0 = Character(
   what_layout="subtitle"
 )
 
+define n1 = Character(
+  None,
+  window_background=None,
+  what_size=60,
+  what_outlines=[( 5, "#993300", 0, 0 )],
+  color="#993300",
+  what_xalign=0.5,
+  what_textalign=0.2,
+  what_layout="subtitle"
+)
+
 # BLUE
 define b0 = Character("Blue", what_outlines=[( 1, "#000000", 0, 0 )], color="#ee6600")
 
