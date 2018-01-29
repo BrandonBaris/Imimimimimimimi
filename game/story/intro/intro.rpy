@@ -1,19 +1,19 @@
 ﻿label start:
-    scene bg forest
+    scene bg bgblack with dissolve
     play music "assets/bgm/newday.mp3" fadeout 1.0 fadein 1.0
     n0 "System initialized..."
     with fade
-    n0 "5"
+    n1 "5"
     with flash
-    n0 "4"
+    n1 "4"
     with flash
-    n0 "3"
+    n1 "3"
     with flash
-    n0 "2"
+    n1 "2"
     with flash
-    n0 "1"
+    n1 "1"
     with flash
-    n0 "Complete"
+    n1 "Complete"
     with longfade
 
     python:
@@ -23,22 +23,23 @@
         if not p0:
             p0 = "Ash"
 
-    "Player name accepted."
-    "Welcome [p0]."
-    "Starting up world..."
+    n0 "Player name accepted."
+    n0 "Welcome [p0]."
+    n0 "Starting up world..."
 
-    scene bg forest temple with fade
+    scene bg temple with fade
     p0 "Where am I?"
     l0 "It's about time you synced up! Wake up!"
+    with hpunch
     p0 "Is that you Lily?"
     "Your colleague Lily relentlessly jabs you in the side as you groggily wake up after syncing up into the game."
-
     l0 "Wake up! We have a lot of testing to do on this run!"
+    with hpunch
     p0 "I'm up! I'm up!"
     "For being in a virtual world, the pain from her sharp jabs still feels so real."
     r0 "I see sleeping beauty finally synced up."
     "Your other colleague, Ryder, chimes in from the global communications channel."
-    l0 "First on the list is testing the newly upgraded battle system."
+    l0 "First on the list is testing the upgraded battle system."
     r0 "I'll spawn a random monster for you two to fight.  Make sure to get used your virtual bodies."
     "You all belong to a company developing a virtual dive system that allows a user to experience a total gaming experience that uses all senses of the body."
     "It uses techniques that sends signals to the brain directly to simulate senses we would feel in the normal world."
@@ -55,6 +56,7 @@
     "The monster form appearing is not the usual size you have tested with."
     "It continues to grow in height to a two story building and scales start to appear on its surface."
     p0 "It's a dragon!  That's the toughest monster we created in the game!  There's no way we can clear that by ourselves!"
+    play music "assets/bgm/primal.mp3" fadeout 1.0 fadein 1.0
     l0 "What?!"
     p0 "Run away!"
     "You signal to Lily to retreat before the monster completes spawning."
@@ -62,6 +64,7 @@
     "Ryder realizes what's going on and frantically starts trying to cancel the spawning."
     r0 "It's not letting me!"
     d0 "ROARRR!!"
+    with vpunch
     "The dragon completes its spawning and immediately starts to aggressively attack any players like it was designed to do."
     p0 "Crap!  Hide Lily!  Let's hope it will wonder off"
     "You run behind a tree to take cover"
@@ -84,39 +87,54 @@
     r0 "[p0]! Disengage and log out immediately! The game is too unstable to continue."
     p0 "AHHHHH!"
     "Ryder's words are too late as the dragon engulfs you in flames and the world around you drowns into a blazing inferno..."
-    n0 ".{w}.{w}."
-    n0 "You have died..."
-    with dissolve
-    n0 "Restarting game..."
     with fade
-    n0 "5"
-    with flash
-    n0 "4"
-    with flash
-    n0 "3"
-    with flash
-    n0 "2"
-    with flash
-    n0 "1"
-    with flash
-    n0 "Complete"
-    with longfade
+    n0 ". {w} . {w} ."
 
+    stop music fadeout 1.0
+
+    n1 "{color=#f20}YOU DIED{/color}"
+    with hpunch
+    scene bg lilywhite01 with flash
+    scene bg bgblack with fade
+    n0 "Restarting game..."
+    play music "assets/bgm/longway.mp3" fadeout 1.0 fadein 1.0
+    with fade
+    n1 "5"
+    with flash
+    n1 "4"
+    with flash
+    n1 "3"
+    with flash
+    n1 "2"
+    with flash
+    n1 "1"
+    with flash
+    n1 "Complete"
+    
+    jump reset_start
+
+label reset_start:
+    scene bg temple with longfade
+    show bluebird at top
+    with dissolve
+    b0 "Imimimimimimimi!"
     b0 "Welcome back [p0]"
     p0 "Huh."
-    b0 "Your memories may be a bit fuzzy as there were errors when resetting to this game state."
+    b0 "Your memories may be a bit fuzzy as there were errors when resetting to this game state.  Imimimimimimimi!"
     p0 "Memory loss in a game?  That's a serious bug!"
-    b0 "There have been difficulties after you encountered a critical bug failure and you have been trapped in this game."
+    b0 "There have been difficulties after you encountered a critical bug failure and you have been trapped in this game.  Imimimimimimimi!"
     p0 "Where's Lily and Ryder? I can't contact them."
-    b0 "They are working to debugging the game so they can rescue you from this virtual prison."
+    b0 "They are working to debugging the game so they can rescue you from this virtual prison.  Imimimimimimimi!"
     p0 "What are you?"
-    b0 "I am a game entity created by Lily to help in debugging.  You can call me Hana. Nice to meet you!"
-    b0 "I have been dispatched because the bugs have been making it unable to use regular communications."
+    b0 "I am a game entity created by Lily to help in debugging.  You can call me Hana. Nice to meet you! Imimimimimimimi!"
+    b0 "I have been dispatched because the bugs have been making it unable to use regular communications.  Imimimimimimimi!"
+    p0 "Do you always need to sing that annoying sound?"
+    b0 "I'm sorry. That's just part of my programming! Imimimimimimimi!"
     p0 "So what am I supposed to do? Just sit here?"
-    b0 "They need help to trace where the errors are coming from and the best way to help them do that is by playing the game like normal."
+    b0 "They need help to trace where the errors are coming from and the best way to help them do that is by playing the game like normal.  Imimimimimimimi!"
     b0 "Should any irregularities go out of control, I will reset you to this saved state to prevent your body from being harmed from the consequences."
     p0 "Alright... Looks like I need to beat this game then and that means defeating that dragon."
-    b0 "That's the spirit."
+    b0 "That's the spirit. Imimimimimimimi!"
 
     # jump finale
     # jump dragon_start
